@@ -1,0 +1,90 @@
+<!DOCTYPE html >
+
+
+
+
+<html>
+<head>
+   <title>TypeScript Web Page</title>
+   <style>
+   	body {
+       	text-align: center;
+       	font-family: 'Times New Roman', Times, serif;
+       	justify-content: center;
+       	align-items: center;
+   	}
+   	.center-container {
+       	justify-content: center;
+   	}
+   	.calculator-container {
+       	text-align: center;
+       	display: none;
+   	}
+   	.calculator-card {
+       	background-color: white;
+       	border-radius: 8px;
+       	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+       	width: 300px;
+       	padding: 20px;
+       	text-align: center;
+       	display: inline-block;
+   	}
+   	.button {
+       	width: 50px;
+       	height: 50px;
+       	font-size: 18px;
+       	margin: 5px;
+       	cursor: pointer;
+       	border: 1px solid #ccc;
+       	border-radius: 4px;
+   	}
+   	.button.operator {
+       	background-color: #f0f0f0;
+   	}
+   	.button.ac {
+       	background-color: #ff6464;
+       	color: white;
+   	}
+   </style>
+
+   <script>
+
+   </script>
+</head>
+<body>
+   <script src="calculator.js"></script>
+   <h1 align="center">Welcome to TypeScript Web Page</h1>
+   <button onclick="showCalculator()">Calculator</button>
+ 
+   <div id="calculator" class="calculator-container">
+   	<div class="calculator-card">
+       	<input id="input" type="text" readonly>
+       	<br>
+       	<button class="button" onclick="addToInput('7')">7</button>
+       	<button class="button" onclick="addToInput('8')">8</button>
+       	<button class="button" onclick="addToInput('9')">9</button>
+       	<button class="button operator" onclick="addToInput('+')">+</button>
+       	<br>
+       	<button class="button" onclick="addToInput('4')">4</button>
+       	<button class="button" onclick="addToInput('5')">5</button>
+       	<button class="button" onclick="addToInput('6')">6</button>
+       	<button class="button operator" onclick="addToInput('-')">-</button>
+       	<br>
+       	<button class="button" onclick="addToInput('1')">1</button>
+       	<button class="button" onclick="addToInput('2')">2</button>
+       	<button class="button" onclick="addToInput('3')">3</button>
+       	<button class="button operator" onclick="addToInput('*')">*</button>
+       	<br>
+       	<button class="button ac" onclick="addToInput('AC')">AC</button>
+       	<button class="button" onclick="addToInput('0')">0</button>
+       	<button class="button operator" onclick="addToInput('=')">=</button>
+       	<button class="button operator" onclick="addToInput('/')">/</button>
+   	</div>
+   </div>
+   <div class="center-container">
+   	<button onclick="showGreeting()">Click here</button>
+   </div>
+   <p id="greeting"></p>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>Validation Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body ng-controller="validateCtrl">
+
+    <h2>Validation Example</h2>
+
+    <form name="myForm" novalidate>
+
+        <p>Username:<br>
+            <input type="text" name="user" ng-model="user" required>
+        </p>
+
+        <p>Email:<br>
+            <input type="email" name="email" ng-model="email" required>
+            
+        </p>
+
+        <p>
+            <button type="submit" ng-disabled="myForm.$invalid" ng-click="submitForm()">Submit</button>
+        </p>
+
+    </form>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('validateCtrl', function ($scope) {
+            $scope.user = 'Pranjal Parmar';
+            $scope.email = 'pranjal.dp@somaiya.edu';
+
+            // Function to handle form submission
+            $scope.submitForm = function() {
+                // Handle form submission logic here
+                console.log('Form submitted!');
+            };
+        });
+    </script>
+
+</body>
+
+</html>

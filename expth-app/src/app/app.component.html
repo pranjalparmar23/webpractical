@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="profileApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="ProfileController">
+  <h1 style="text-align:center">Welcome to My Profile Page</h1>
+  <ul>
+    <li><h2 style="text-align:center">{{ name }}</h2></li>
+    <li><h2 style="text-align:center">{{ year }}</h2></li>
+    <li><h2 style="text-align:center">{{ branch }}</h2></li>
+    <li><h2 style="text-align:center">{{ rollNo }}</h2></li>
+  </ul>
+  <h2 style="text-align:center"><a href="{{ profileLink }}">Click here to know more about me</a></h2>
+
+  <script>
+    angular.module('profileApp', [])
+      .controller('ProfileController', function($scope) {
+        // Define initial values for profile data
+        $scope.name = 'Pranjal Parmar';
+        $scope.year = 'Third year';
+        $scope.branch = 'Information Technology';
+        $scope.rollNo = 'Roll no. 28';
+        $scope.profileLink = '/home/itadmin/Desktop/pranjal/home.html'; // Link to profile details
+      });
+  </script>
+</body>
+</html>
